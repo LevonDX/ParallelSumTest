@@ -63,18 +63,29 @@ namespace ParallelSumTest
             t9.Start();
             t10.Start();
 
-            while (
-                t1.ThreadState == ThreadState.Running ||
-                t2.ThreadState == ThreadState.Running ||
-                t3.ThreadState == ThreadState.Running ||
-                t4.ThreadState == ThreadState.Running ||
-                t5.ThreadState == ThreadState.Running ||
-                t6.ThreadState == ThreadState.Running ||
-                t7.ThreadState == ThreadState.Running ||
-                t8.ThreadState == ThreadState.Running ||
-                t9.ThreadState == ThreadState.Running ||
-                t10.ThreadState == ThreadState.Running
-                ) ;
+            //while (
+            //    t1.ThreadState == ThreadState.Running ||
+            //    t2.ThreadState == ThreadState.Running ||
+            //    t3.ThreadState == ThreadState.Running ||
+            //    t4.ThreadState == ThreadState.Running ||
+            //    t5.ThreadState == ThreadState.Running ||
+            //    t6.ThreadState == ThreadState.Running ||
+            //    t7.ThreadState == ThreadState.Running ||
+            //    t8.ThreadState == ThreadState.Running ||
+            //    t9.ThreadState == ThreadState.Running ||
+            //    t10.ThreadState == ThreadState.Running
+            //    ) ;
+
+            t1.Join();
+            t2.Join();
+            t3.Join();
+            t4.Join();
+            t5.Join();
+            t6.Join();
+            t7.Join();
+            t8.Join();
+            t9.Join();
+            t10.Join();
 
             long finalSum = sumArray.Sum();
 
